@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web IDE Embedded Content</title>
+
+  <style>
+    * {
+      transition: none;
+    }
+
+    body {
+      background-color: white;
+      color: black;
+    }
+  </style>
+
+  <style id="css">
+
+  </style>
+</head>
+
+<body></body>
+
+<script>
+  setInterval(() => {
+    if (localStorage.getItem("html") != document.body.innerHTML) {
+      document.body.innerHTML = localStorage.getItem("html");
+    }
+
+    if (localStorage.getItem("css") != document.getElementById("css").innerHTML) {
+      document.getElementById("css").innerHTML = localStorage.getItem("css");
+    }
+  });
+</script>
+</html>
