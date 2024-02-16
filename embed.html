@@ -33,6 +33,16 @@
     if (localStorage.getItem("css") != document.getElementById("css").innerHTML) {
       document.getElementById("css").innerHTML = localStorage.getItem("css");
     }
+
+    try {
+      eval(localStorage.getItem("js"));
+
+      window.top.postMessage("No errors");
+    }
+
+    catch (error) {
+      window.top.postMessage(error);
+    }
   });
 </script>
 </html>
