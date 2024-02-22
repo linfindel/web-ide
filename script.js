@@ -17,3 +17,21 @@ window.onmessage = function(e) {
     document.getElementById("nav").className = "";
   }
 };
+
+function switchViewport() {
+  if (document.getElementById("embed").style.width == "20%") {
+    document.getElementById("embed").style.width = "100%";
+    document.getElementById("embed").style.height = "90vh";
+
+    document.getElementById("viewport-icon").innerText = "smartphone";
+    document.getElementById("viewport-text").innerText = "Mobile view";
+  }
+
+  else {
+    document.getElementById("embed").style.width = "20%";
+    document.getElementById("embed").style.height = "80vh";
+
+    document.getElementById("viewport-icon").innerText = "computer";
+    document.getElementById("viewport-text").innerText = "Desktop view";
+  }
+}
