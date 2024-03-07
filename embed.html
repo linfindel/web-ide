@@ -25,24 +25,22 @@
 <body></body>
 
 <script>
-  setInterval(() => {
-    if (localStorage.getItem("html") != document.body.innerHTML) {
-      document.body.innerHTML = localStorage.getItem("html");
-    }
+  if (localStorage.getItem("html") != document.body.innerHTML) {
+    document.body.innerHTML = localStorage.getItem("html");
+  }
 
-    if (localStorage.getItem("css") != document.getElementById("css").innerHTML) {
-      document.getElementById("css").innerHTML = localStorage.getItem("css");
-    }
+  if (localStorage.getItem("css") != document.getElementById("css").innerHTML) {
+    document.getElementById("css").innerHTML = localStorage.getItem("css");
+  }
 
-    try {
-      eval(localStorage.getItem("js"));
+  try {
+    eval(localStorage.getItem("js"));
 
-      window.top.postMessage("No errors");
-    }
+    window.top.postMessage("No errors");
+  }
 
-    catch (error) {
-      window.top.postMessage(error);
-    }
-  });
+  catch (error) {
+    window.top.postMessage(error);
+  }
 </script>
 </html>

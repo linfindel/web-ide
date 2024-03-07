@@ -1,5 +1,6 @@
 function update(lang) {
   localStorage.setItem(lang, document.getElementById(lang).value);
+  document.getElementById('embed').src = document.getElementById('embed').src;
 }
 
 document.getElementById("html").value = localStorage.getItem("html");
